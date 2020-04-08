@@ -68,7 +68,19 @@ namespace ACM.BL.Tests
         public void ValidateValid()
         {
             // --Arrange
-            var 
+            var customer = new Customer
+            {
+                LastName = "Baggins",
+                EmailAddress = "baggins@gmail.com"
+            };
+
+            var expected = true;
+
+            // -- Act
+            var actual = customer.Validate();
+
+            // -- Assert
+            Assert.AreEqual(expected, actual);
         }
     }
 }
